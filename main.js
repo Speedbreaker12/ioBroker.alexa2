@@ -2042,6 +2042,7 @@ function createNotificationStates(serialOrName) {
             }
         }
         setOrUpdateObject(devId + '.Timer.nextTimerDate', {common: {type: 'number', role: 'date', name: 'Unix epoch timestamp for next timer'}}, nextTimerObject ? (Date.now() + nextTimerObject.remainingTime) : 0, nextTimerObject ? nextTimerObject.set : null);
+        setOrUpdateObject('History.nextTimerDate', {common: {type: 'number', role: 'date', name: 'Unix epoch timestamp for next timer'}}, nextTimerObject ? (Date.now() + nextTimerObject.remainingTime) : 0, nextTimerObject ? nextTimerObject.set : null);
     }
 }
 
